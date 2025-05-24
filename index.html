@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Password Page</title>
+  <style>
+    body {
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    .container {
+      text-align: center;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input {
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+      width: 200px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <label for="password">Enter Password:</label><br/>
+    <input type="password" id="password"/><br/>
+    <button onclick="checkPassword()">Submit Password</button>
+    <p id="message" style="color:red; margin-top:10px;"></p>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("password").value;
+      const message = document.getElementById("message");
+      if (input === "hello") {
+        window.location.href = "hello.html";
+      } else {
+        message.textContent = "Incorrect password.";
+      }
+    }
+  </script>
+</body>
+</html>
+<!-- hello.html -->
